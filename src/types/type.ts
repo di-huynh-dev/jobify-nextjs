@@ -24,6 +24,13 @@ export enum JobMode {
   Internship = 'internship',
 }
 
+export type GetAllJobsActionTypes = {
+  search?: string
+  jobStatus?: string
+  page?: number
+  limit?: number
+}
+
 export const createAndEditJobSchema = z.object({
   position: z.string().min(2, {
     message: 'position must be at least 2 characters.',

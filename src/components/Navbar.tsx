@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkDropdown from './LinkDropdown'
-import ThemeToggle from './ThemeToggle'
 import { UserButton } from '@clerk/nextjs'
+import { ModeToggle } from './ThemeToggle'
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
         <LinkDropdown />
       </div>
       <div className="flex items-center gap-x-4">
-        <ThemeToggle />
+        <ModeToggle />
         <UserButton afterSignOutUrl="/" />
       </div>
     </nav>

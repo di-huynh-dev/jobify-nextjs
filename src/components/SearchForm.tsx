@@ -2,7 +2,6 @@
 import { Input } from './ui/input'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Button } from './ui/button'
-
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { JobStatus } from '@/types/type'
 

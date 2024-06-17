@@ -1,5 +1,5 @@
 import { JobType } from '@/types/type'
-import { MapPin, Briefcase, CalendarDays, RadioTower } from 'lucide-react'
+import { MapPin, Briefcase, CalendarDays, RadioTower, Edit } from 'lucide-react'
 
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -26,6 +26,15 @@ const JobCard = ({ job }: { job: JobType }) => {
           <JobInfo icon={<RadioTower className="w-4 h-4" />} text={job.status} />
         </Badge>
       </CardContent>
+      <CardFooter className="flex gap-4">
+        <Button size="sm" className="flex gap-2 capitalize">
+          <Link href={`/jobs/${job.id}`}>
+            <Edit />
+          </Link>
+          Edit
+        </Button>
+        <DeleteJobButton id={job.id} />
+      </CardFooter>
     </Card>
   )
 }
